@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class main{
+    static int digit(int n){
+        if(n==0){
+            return 0;
+        }
+        else{
+            return (n % 10)+digit(n/10);
+        }
+    }
+  public static void main(String[] args) {
+      Scanner sc=new Scanner(System.in);
+      int num=sc.nextInt();
+      if(num<1000){
+          int res = digit(num);
+          System.out.printf("Sum of Digit:%04d",res);
+      }
+else{
+    System.out.println("Enter a Valid Input!!!!!!!");
+}    
+    }
+}
